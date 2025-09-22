@@ -1,4 +1,32 @@
-# Airflow 101 (Airflow 3)
+# Airflow 101 (Airflow 3) 🚀
+
+## Airflow: UI
+
+#### 1. What's the best view to use to visualize your assets?  
+- [x] Asset View ✅  
+- [ ] DAGs View
+- [ ] Graph View
+
+#### 2. What's the best view to check the historical states of the DAG Runs and Task Instances for a given DAG?
+- [x] Grid View ✅
+- [ ] Graph View
+- [ ] DAGs View
+
+#### 3. What's the best view to get overall metrics of your Airflow instance?
+- [x] The Home View ✅
+- [ ] Code View
+- [ ] Asset View
+
+#### 4. What's the best view to know if code updates have been applied?
+- [ ] Home View
+- [x] Code View ✅  
+- [ ] Graph View
+
+#### 5. What does the last column on the DAG View show?
+- [x] DAG run states of current and previous DAG Runs for a given DAG ✅  
+- [ ] Task's states of the current or latest DAG Run for a given DAG
+
+---
 
 ## Airflow: DAGs 101
 
@@ -31,4 +59,5 @@
 - [x] Yes ✅
 - [ ] No
 
-***
+---
+
