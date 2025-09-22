@@ -1,5 +1,51 @@
 # 🌬️ Airflow — DAGs 101
 
+## 🧰 Default Arguments in Airflow
+
+- You can apply arguments to tasks like:  
+  🔁 `retries`  
+  ⏳ `execution_timeout`  
+  📧 `email_on_failure`, etc.
+
+- 🛑 **Default behavior**:  
+  Tasks have `retries=0` (fail immediately on error).
+
+### 🔄 Problem with Repetition
+
+Manually setting `retries=3` on every task is repetitive:
+
+```python
+task_a = PythonOperator(task_id='task_a', python_callable=print_a, retries=3)
+```
+
+Doing this for every task? 😩 Not ideal.
+
+✅ Solution: `default_args`  
+Avoid repetition by passing a default_args dictionary to the DAG:
+
+```python
+default_args = {
+    'retries': 3,
+}
+
+@dag('my_dag',
+     start_date=datetime(2025, 1, 1),
+     default_args=default_args,
+     description='A simple tutorial DAG',
+     tags=['data_science'],
+     schedule='@daily')
+def my_dag():
+    task_a = PythonOperator(task_id='task_a', python_callable=print_a)
+    task_b = PythonOperator(task_id='task_b', python_callable=print_b)
+    task_c = PythonOperator(task_id='task_c', python_callable=print_c)
+    task_d = PythonOperator(task_id='task_d', python_callable=print_d)
+    task_e = PythonOperator(task_id='task_e', python_callable=print_e)
+
+    chain(task_a, [task_b, task_c], [task_d, task_e])
+```
+🎉 All tasks inherit retries=3 — no repetition needed.
+
+
 ## 📘 DAG (Directed Acyclic Graph)
 
 - 🔑 **Unique Identifier**  
