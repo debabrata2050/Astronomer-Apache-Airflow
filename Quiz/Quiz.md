@@ -90,3 +90,32 @@
 - [x] No ✅
 
 ---
+
+## Airflow: XComs 101
+
+#### 1. Select the 4 factors that define the uniqueness of an XCom
+- [x] key ✅  
+- [ ] value
+- [ ] timestamp
+- [x] dag_id ✅
+- [x] task_id ✅
+- [x] logical_date ✅
+
+#### 2. Is it possible to push an XCom without explicitly specifying a key?
+- [x] Yes ✅  
+- [ ] No  
+
+#### 3. An XCom is pushed into...
+- [ ] The scheduler  
+- [ ] The worker  
+- [ ] The webserver  
+- [x] The database ✅  
+
+#### 4. With Postgres, can you share 2GB of data between 2 tasks with an XCom?
+- [ ] Yes  
+- [x] No ✅  
+
+#### 5. How does the Scheduler know which XCom to choose for a given DAGRun when multiple XComs have the same key, dag_id, and task_id?
+- [ ] It selects one XCom randomly  
+- [x] It selects the XCom based on the logical date ✅  
+- [ ] You can't have multiple XComs with the same key, dag_id and task_id  
