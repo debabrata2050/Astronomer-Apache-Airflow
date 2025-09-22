@@ -61,3 +61,32 @@
 
 ---
 
+## Airflow: DAG Scheduling
+
+#### 1. If a DAG runs every day at midnight with a `start_date=datetime(2025, 1, 1)`, when will the 3rd DAG run be triggered?
+- [ ] 2025-01-01 00:00
+- [ ] 2025-01-02 00:00
+- [x] 2025-01-03 00:00 ✅
+- [ ] 2025-01-04 00:00
+
+#### 2. If a DAG with a "@daily" schedule is triggered at 00:00 on 2025-02-02, what's the logical date value for this DAG Run?
+- [x] 2025-02-01 00:00 ✅
+- [ ] 2025-02-02 00:00
+- [ ] 2025-02-03 00:00
+
+#### 3. If a DAG with a "@daily" schedule is triggered at 00:00 on 2025-02-02, what's the `data_interval_end` value for this DAG Run (assuming data intervals are used)?
+- [ ] 2025-02-01
+- [x] 2025-02-02 ✅
+- [ ] 2025-02-03
+- [ ] 2025-02-04
+
+#### 4. With `catchup=False`, what happens when you run your DAG for the first time, and it has a `start_date` defined as 30 days ago?
+- [ ] Nothing
+- [x] The latest non-triggered DAG Run is triggered ✅
+- [ ] All non-triggered DAG Runs get triggered
+
+#### 5. `logical_date = data_interval_start = data_interval_end` by default?
+- [ ] Yes
+- [x] No ✅
+
+---
