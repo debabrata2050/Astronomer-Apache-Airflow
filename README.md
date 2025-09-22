@@ -41,7 +41,7 @@ The Airflow 101 learning path guides you through the essential skills to get sta
 ## 🔗 Useful Resources  
 | Logo | Name                  | Description                                    | Link |
 |------|-----------------------|------------------------------------------------|------|
-| <img width="120" height="120" alt="astronomer-logo" src="https://github.com/user-attachments/assets/a83882b9-6a12-4f13-83c6-75af2aad2079" /> | Airflow 101 (Airflow 3) | Official learning path for Apache Airflow 3 by Astronomer | [![Astronomer Learning Path](https://img.shields.io/badge/Airflow_101-blue?style=for-the-badge)](https://academy.astronomer.io/path/airflow-101) |
+| <img width="120" height="120" alt="astronomer-logo" src="https://github.com/user-attachments/assets/a83882b9-6a12-4f13-83c6-75af2aad2079" /> | **Airflow 101 (Airflow 3)** | Official learning path for Apache Airflow 3 by Astronomer | [![Astronomer Learning Path](https://img.shields.io/badge/Airflow_101-blue?style=for-the-badge&logo=apacheairflow&logoColor=white)](https://academy.astronomer.io/path/airflow-101) |
 
 ---
 
