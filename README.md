@@ -31,8 +31,6 @@ The Airflow 101 learning path guides you through the essential skills to get sta
 | Airflow: Connections and Variables | Managing Connections and Variables in Airflow         |
 | [Airflow 2] Airflow: Debug DAGs | Debugging DAGs effectively                              |
 
----
-
 ## 📂 Repo Contents  
 - **Quiz questions and answers** for each module ✅  
 - **Concise notes** covering important Airflow concepts 📄  
@@ -42,8 +40,6 @@ The Airflow 101 learning path guides you through the essential skills to get sta
 | Logo | Name                  | Description                                    | Link |
 |------|-----------------------|------------------------------------------------|------|
 | <img width="120" height="120" alt="astronomer-logo" src="https://github.com/user-attachments/assets/a83882b9-6a12-4f13-83c6-75af2aad2079" /> | **Airflow 101 (Airflow 3)** | Official learning path for Apache Airflow 3 by Astronomer | [![Astronomer Learning Path](https://img.shields.io/badge/Airflow_101-blue?style=for-the-badge&logo=apacheairflow&logoColor=white)](https://academy.astronomer.io/path/airflow-101) |
-
----
 
 ## ⭐ Support  
 If you find this repo helpful, please give it a ⭐ by clicking the **Star** button at the top right! It motivates me to keep improving and helps others discover this resource.
