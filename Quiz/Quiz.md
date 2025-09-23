@@ -139,3 +139,81 @@
 #### 3. Does the Sensor instantly detect the file when it arrives in the bucket?
 - [ ] Yes  
 - [x] No, it depends on the `poke_interval` ✅
+
+---
+
+# [Airflow 2] Airflow: Debug DAGs
+
+#### 1. This DAG doesn’t show up on the UI. Why?
+```python
+from airflow.decorators import dag,task
+from pendulum import datetime
+
+@dag(
+    'test_dag',
+    start_date = datetime(2023,3,1)
+)
+def test_dag():
+     @task
+    def test_task():
+        return ' Hello World'
+    test_task()
+```
+- [ ] The schedule parameter is missing
+- [ ] The start_date is in the past
+- [x] test_dag() is not called ✅
+
+#### 2. On manually triggering this DAG you don't see any task execution. Why?
+```python
+from airflow.decorators import dag,task
+from pendulum import datetime
+
+@dag(
+    'test_dag',
+    start_date = datetime(3030,3,1)
+)
+def test_dag():
+     @task
+    def test_task():
+        return 'Hello World'
+    test_task()
+
+test_dag()
+```
+- [ ] There is no end_date
+- [x] The start_date is in the future ✅
+- [ ] Because there is only one task and no proper pipeline
+
+#### 3. How many running DAG runs will you get as soon as you unpause this DAG?
+```python
+from airflow.decorators import dag,task
+from pendulum import datetime
+
+@dag(
+    'test_dag',
+    start_date = datetime(2023,1,1),
+    schedule = '@daily',
+    catchup = False
+)
+def test_dag():
+    @task
+    def my_task():
+        return 'Hello World'
+    my_task()
+
+test_dag()
+```
+- [ ] 0
+- [x] 1 ✅
+- [ ] 16
+- [ ] 32
+
+#### 4. You just finished writing your DAG and saved the file in the dags folder.  
+How long will it take to appear on the UI?
+- [x] By default it may take up to 5 minutes or more. ✅
+- [ ] It will be added instantly
+- [ ] It may take upto 30 seconds.
+
+#### 5. Is it possible to run tasks that are dependant on different versions of Python in the same DAG?
+- [x] Yes ✅
+- [ ] No
