@@ -119,3 +119,23 @@
 - [ ] It selects one XCom randomly  
 - [x] It selects the XCom based on the logical date ✅  
 - [ ] You can't have multiple XComs with the same key, dag_id and task_id  
+
+---
+
+# Airflow: Sensors
+
+## Waiting for files in a S3 bucket 📂
+
+#### 1. You can't find the connection type Amazon Web Services. What should you do?
+- [x] Install `apache-airflow-providers-amazon` ✅
+- [ ] Install `boto3`
+- [ ] Use the `http` connection type
+
+#### 2. If the file never arrives in the S3 bucket, when will the `S3KeySensor` time out?
+- [ ] In 24 hours
+- [x] In 7 days ✅
+- [ ] Never
+
+#### 3. Does the Sensor instantly detect the file when it arrives in the bucket?
+- [ ] Yes  
+- [x] No, it depends on the `poke_interval` ✅
